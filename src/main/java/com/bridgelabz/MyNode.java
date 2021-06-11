@@ -10,6 +10,7 @@ public class MyNode<E> implements INode<E>{
     }
 
     public E getKey() {
+
         return key;
     }
 

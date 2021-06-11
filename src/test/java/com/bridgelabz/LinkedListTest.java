@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class LinkedListTest {
     @Test
-    public void givenThreeNumber_whenAddedToLinkedListShouldNeAddedToTheTop() {
+    public void givenThreeNumber_whenAddedToLinkedListShouldAddedToTheTop() {
 
         MyNode<Integer> myThirdNode = new MyNode<>(70);
         MyNode<Integer> mySecondNode = new MyNode<>(30);
