@@ -8,38 +8,40 @@ public class LinkedList<E> {
         this.tail = null;
     }
 
-    public void add(INode<E> node) {
-        if (head == null) {
-            head = node;
-            tail = node;
+    public void add(INode<E> newNode) {
+        if (this.tail == null) {
+            this.tail = newNode;
+        }
+        if (this.head == null) {
+            this.head = newNode;
         } else {
-            INode<E> tempNode = head;
-            head = node;
-            head.setNext(tempNode);
+            INode<E> tempNode = this.head;
+            this.head = newNode;
+            this.head.setNext(tempNode);
         }
     }
 
-    public void printNodes() {
+    public void append(INode<E> myNode) {
+        if (this.head == null) {
+            this.head = myNode;
+        }
+        if (this.tail != null) {
+            this.tail.setNext(myNode);
+        }
+        this.tail = myNode;
+    }
+    public void printMyNodes() {
+        StringBuffer myNodes = new StringBuffer("My Nodes are: ");
+        System.out.println("Print statement");
         INode<E> tempNode = head;
-        while(tempNode.getNext() != null) {
-            System.out.print(tempNode.getKey() + "->");
+        while (tempNode.getNext() != null) {
+            myNodes.append(tempNode.getKey());
+            if (!tempNode.equals(tail)) myNodes.append("->");
             tempNode = tempNode.getNext();
         }
-        System.out.print(tempNode.getKey());
-    }
 
-    public static void main(String[] args) {
-
-        LinkedList<Integer> list = new LinkedList<>();
-
-        MyNode<Integer> firstNode = new MyNode<>(56);
-        MyNode<Integer> secondNode = new MyNode<>(30);
-        MyNode<Integer> thirdNode = new MyNode<>(70);
-
-        list.add(thirdNode);
-        list.add(secondNode);
-        list.add(firstNode);
-        list.printNodes();
+        myNodes.append((tempNode.getKey()));
+        System.out.println(myNodes);
     }
 
 }
