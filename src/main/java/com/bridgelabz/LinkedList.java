@@ -3,7 +3,8 @@ package com.bridgelabz;
 public class LinkedList<E> {
     public INode<E> head;
     public INode<E> tail;
-    public LinkedList() {
+
+    public  void MyLinkedList() {
         this.head = null;
         this.tail = null;
     }
@@ -30,6 +31,7 @@ public class LinkedList<E> {
         }
         this.tail = myNode;
     }
+
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes are: ");
         System.out.println("Print statement");
@@ -42,6 +44,11 @@ public class LinkedList<E> {
 
         myNodes.append((tempNode.getKey()));
         System.out.println(myNodes);
+    }
+    public void insert(INode<E> myNode, INode<E> newNode) {
+        INode<E> tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext((tempNode));
     }
 
 }

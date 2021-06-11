@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MyNodeTest {
     @Test
-    public void given3Number_WhenLinkedShouldPassedLinkedListTest() {
+    public void given3Number_WhenLinkedShouldPassLinkedListTest() {
 
         MyNode<Integer> myFirstNode = new MyNode<>(56);
         MyNode<Integer> mySecondNode = new MyNode<>(30);

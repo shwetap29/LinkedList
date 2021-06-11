@@ -1,6 +1,7 @@
 package com.bridgelabz;
 
 public class MyNode<E> implements INode<E>{
+
     public E key;
     public MyNode<E> next;
 
