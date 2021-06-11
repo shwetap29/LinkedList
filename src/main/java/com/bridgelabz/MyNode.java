@@ -31,9 +31,5 @@ public class MyNode<T> implements INode<T> {
     public void setNext(INode next) {
         this.next = next;
     }
-
-    /* print welcome message */
-    public void printWelcomeMessage() {
-        System.out.println("Welcome to the Data Structure Problem");
     }
-}
+

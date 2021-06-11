@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridgelabz.LinkedListTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-06-11T16:51:23" hostname="SHWETA29" time="0.033">
+<testsuite name="com.bridgelabz.LinkedListTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-06-11T18:08:45" hostname="SHWETA29" time="0.016">
   <properties/>
-  <testcase name="givenElementToSearchWhenMatched_ShouldPassLinkedListResult" classname="com.bridgelabz.LinkedListTest" time="0.012"/>
-  <testcase name="givenFirstElement_WhenDeleted_ShouldPassLinkedListResult" classname="com.bridgelabz.LinkedListTest" time="0.011"/>
-  <testcase name="givenLastElement_WhenDeleted_ShouldPassLinkedListTest" classname="com.bridgelabz.LinkedListTest" time="0.002"/>
-  <testcase name="given3Numbers_WhenAddedToTheLinkedList_ShouldBeAddedToLast" classname="com.bridgelabz.LinkedListTest" time="0.002"/>
-  <testcase name="givenThreeNumbers_WhenInsertedSecondInBetween_ShouldPassLinkedList" classname="com.bridgelabz.LinkedListTest" time="0.001"/>
-  <testcase name="givenThreeNumber_whenAddedToLinkedList_ShouldBeAddedToTheTop" classname="com.bridgelabz.LinkedListTest" time="0.001"/>
-  <system-out><![CDATA[Print statement
-My Nodes are: 30->70
-Print statement
-My Nodes are: 56->30
-Print statement
-My Nodes are: 56->30->70
-Print statement
-My Nodes are: 56->30->70
-Print statement
-My Nodes are: 70->30->56
-]]></system-out>
+  <testcase name="PopNodeFromLast_ShouldReturnTrue" classname="com.bridgelabz.LinkedListTest" time="0.008"/>
+  <testcase name="PopNodeFromFront_ShouldReturnTrue" classname="com.bridgelabz.LinkedListTest" time="0.0"/>
+  <testcase name="SearchNodeForGivenDataIfFound_ShouldReturnTrue" classname="com.bridgelabz.LinkedListTest" time="0.001"/>
+  <testcase name="GivenANodeInsertedInBetweenResultingNodes_ShouldReturnTrue" classname="com.bridgelabz.LinkedListTest" time="0.0"/>
+  <testcase name="GivenThreeNumbers_WhenAddedToLinkedList_ShouldAddedtoBottom" classname="com.bridgelabz.LinkedListTest" time="0.0"/>
+  <testcase name="SearchDataNodeForGivenDataIfFound_ShouldInsertGivenNodeAndReturnTrue" classname="com.bridgelabz.LinkedListTest" time="0.0"/>
+  <testcase name="GivenThreeNumbers_WhenAddedToLinkedList_ShouldBeAddedtoTop" classname="com.bridgelabz.LinkedListTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
