@@ -32,10 +32,42 @@ public class LinkedList<E> {
         this.tail = myNode;
     }
 
-    public void printMyNodes() {
-        StringBuffer myNodes = new StringBuffer("My Nodes are: ");
+  //  public void printMyNodes() {
+    //    StringBuffer myNodes = new StringBuffer("My Nodes are: ");
+   //System.out.println("Print statement");
+     //   INode<E> tempNode = head;
+       // while (tempNode.getNext() != null) {
+         //   myNodes.append(tempNode.getKey());
+           // if (!tempNode.equals(tail)) myNodes.append("->");
+            //tempNode = tempNode.getNext();
+        //}
+        //myNodes.append((tempNode.getKey()));
+        //System.out.println(myNodes);
+    //}
+
+        public void insert(int position, INode<E> node) {
+            int count = 0;
+            INode<E> previousNode = null;
+            INode<E> currentNode = head;
+            while (count != position) {
+                count++;
+                previousNode = currentNode;
+                currentNode = currentNode.getNext();
+            }
+            assert previousNode != null;
+            previousNode.setNext(node);
+            node.setNext(currentNode);
+        }
+    public E pop() {
+        INode<E> tempNode = head.getNext();
+        E key = head.getKey();
+        head = tempNode;
+        return key;
+    }
+    public void printNodes() {
+        StringBuilder myNodes = new StringBuilder("My Nodes are: ");
         System.out.println("Print statement");
-        INode<E> tempNode = head;
+        INode tempNode = head;
         while (tempNode.getNext() != null) {
             myNodes.append(tempNode.getKey());
             if (!tempNode.equals(tail)) myNodes.append("->");
@@ -45,10 +77,6 @@ public class LinkedList<E> {
         myNodes.append((tempNode.getKey()));
         System.out.println(myNodes);
     }
-    public void insert(INode<E> myNode, INode<E> newNode) {
-        INode<E> tempNode = myNode.getNext();
-        myNode.setNext(newNode);
-        newNode.setNext((tempNode));
-    }
+
 
 }
